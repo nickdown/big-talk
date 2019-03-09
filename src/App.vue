@@ -1,17 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Five Minutes of Conversation</h1>
+    <topic></topic>
+    <timer v-show="! this.complete" @completed="completed"></timer>
+    <p v-show="this.complete">Congratulations, you have completed five minutes of conversation.</p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Timer from './components/Timer.vue';
+import Topic from './components/Topic.vue';
 
 export default {
+
   name: 'app',
   components: {
-    HelloWorld
+    Timer,
+    Topic
+  },
+
+  data: function () {
+    return {
+      complete: false,
+    }
+  },
+
+  methods: {
+    completed: function () {
+      this.complete = true;
+    }
   }
 }
 </script>
