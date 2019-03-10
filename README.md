@@ -1,4 +1,4 @@
-# five-minutes-of-conversation
+# big-talk
 
 ## Project setup
 ```
