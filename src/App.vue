@@ -1,47 +1,57 @@
 <template>
-  <div id="app">
-    <h1>Five Minutes of Conversation</h1>
-    <topic></topic>
-    <timer v-show="! this.complete" @completed="completed"></timer>
-    <p v-show="this.complete">Congratulations, you have completed five minutes of conversation.</p>
-  </div>
+    <div id="app" class="flex flex-col h-screen bg-grey-lighter mx-auto">
+        <div class="flex flex-col flex-grow justify-center">
+            <div class="font-sans text-lg text-grey-darkest text-center">
+                <topic class="my-4"></topic>
+                <div class="my-16">
+                    <timer v-show="! this.complete" @completed="completed"></timer>
+                    <p v-show="this.complete">Congratulations, you have completed five minutes of conversation.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center bg-grey-light py-8">
+            <p class="text-center text-grey-dark text-sm">
+                ©2019 Nick Down. All rights reserved.
+            </p>
+        </div>
+    </div>
 </template>
 
 <script>
-import Timer from './components/Timer.vue';
-import Topic from './components/Topic.vue';
+    import Timer from './components/Timer.vue';
+    import Topic from './components/Topic.vue';
 
-export default {
+    export default {
 
-  name: 'app',
-  components: {
-    Timer,
-    Topic
-  },
+        name: 'app',
+        components: {
+            Timer,
+            Topic
+        },
 
-  data: function () {
-    return {
-      complete: false,
+        data: function () {
+            return {
+                complete: false,
+            }
+        },
+
+        methods: {
+            completed: function () {
+                this.complete = true;
+            }
+        }
     }
-  },
-
-  methods: {
-    completed: function () {
-      this.complete = true;
-    }
-  }
-}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<!--<style>-->
+<!--#app {-->
+<!--font-family: 'Avenir', Helvetica, Arial, sans-serif;-->
+<!-- -webkit-font-smoothing: antialiased;-->
+<!-- -moz-osx-font-smoothing: grayscale;-->
+<!--text-align: center;-->
+<!--color: #2c3e50;-->
+<!--margin-top: 60px;-->
+<!--}-->
+<!--</style>-->
 
 <style src="./main.css"></style>
