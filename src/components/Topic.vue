@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p class="text-2xl italic">Have a quick chat about: </p>
+        <p class="text-2xl italic">Your BIGTALK Topic: </p>
         <p class="text-5xl">{{ topic }}</p>
     </div>
 </template>
