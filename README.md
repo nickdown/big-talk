@@ -1,5 +1,7 @@
 # big-talk
 
+[![Build Status](https://travis-ci.org/nickdown/big-talk.svg?branch=master)](https://travis-ci.org/nickdown/big-talk)
+
 ## Project setup
 ```
 npm install
