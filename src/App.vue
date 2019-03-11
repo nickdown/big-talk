@@ -3,7 +3,7 @@
         <div class="flex flex-col flex-grow justify-center">
             <div class="font-sans text-lg text-grey-darkest text-center">
                 <topic class="my-4"></topic>
-                <div class="my-16">
+                <div class="my-8">
                     <timer v-show="! this.complete" @completed="completed"></timer>
                     <p v-show="this.complete">Congratulations, you have completed five minutes of conversation.</p>
                 </div>
@@ -11,7 +11,7 @@
         </div>
         <div class="flex items-center justify-center bg-grey-light py-8">
             <p class="text-center text-grey-dark text-sm">
-                ©2019 Nick Down. All rights reserved.
+                By: <a href="https://nickdown.com" class="no-underline"><span class="italic text-blue">Nick Down</span></a>.
             </p>
         </div>
     </div>
@@ -42,16 +42,5 @@
         }
     }
 </script>
-
-<!--<style>-->
-<!--#app {-->
-<!--font-family: 'Avenir', Helvetica, Arial, sans-serif;-->
-<!-- -webkit-font-smoothing: antialiased;-->
-<!-- -moz-osx-font-smoothing: grayscale;-->
-<!--text-align: center;-->
-<!--color: #2c3e50;-->
-<!--margin-top: 60px;-->
-<!--}-->
-<!--</style>-->
 
 <style src="./main.css"></style>
