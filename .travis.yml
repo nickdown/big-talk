@@ -11,7 +11,7 @@ install:
   - npm install -g travis-ci-cloudfront-invalidation
   - npm install
 
-script
+script:
   - npm run build
 
 deploy:
